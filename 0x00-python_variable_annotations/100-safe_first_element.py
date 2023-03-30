@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
+"""Augment the following code with the correct duck-typed annotations"""
+from typing import Any, Union, Sequence
 
-from typing import TypeVar, Mapping, Any, Union
 
-T = TypeVar('T')
-
-def safely_get_value(dct: Mapping, key: Any, default: Union[T, None] = None) -> Union[Any, T]:
-    if key in dct:
-        return dct[key]
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
+    """types of the elements of the input are not know"""
+    if lst:
+        return lst[0]
     else:
-        return default
+        return None
