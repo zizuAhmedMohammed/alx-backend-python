@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""do not create an async function, use the regular function syntax"""
+"""do not create an async function, use the regular function """
 import asyncio
 
 wait_random = __import__('0-basic_async_syntax').wait_random
