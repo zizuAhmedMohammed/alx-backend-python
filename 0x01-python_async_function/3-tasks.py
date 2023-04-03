@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-This module defines a function that creates an 
-asyncio.Task that waits for a random delay.
-"""
+"""do not create an async function, use the regular function syntax"""
 import asyncio
 
 wait_random = __import__('0-basic_async_syntax').wait_random
