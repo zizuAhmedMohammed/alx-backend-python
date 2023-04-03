@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
-""" 
-This script defines an asynchronous function `wait_n` 
-
-that waits for multiple random delay tasks to complete.
-"""
+""" An asynchronous function `wait_n` that waits for multiple random delay tasks to complete. """
 
 import asyncio
-import random
 from typing import List
 
 wait_random = __import__('0-basic_async_syntax').wait_random
