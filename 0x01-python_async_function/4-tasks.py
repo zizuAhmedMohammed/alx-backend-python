@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""An asynchronous function and a corresponding task function."""
+"""Take the code from wait_n and alter it into a new function task_wait_n"""
 import asyncio
 from typing import List
 
@@ -13,9 +13,4 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
     list of resulting delays.
     """
     tasks = [task_wait_random(max_delay) for _ in range(n)]
-    delays = []
-    for task in asyncio.as_completed(tasks):
-        delay = await task
-        delays.append(delay)
-    
-    return sorted(delays)
+    return [await task for task in asyncio.as_completed(tasks)]
