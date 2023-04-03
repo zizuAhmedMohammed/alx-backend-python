@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""An asynchronous function `wait_n` that waits for multiple random delay tasks to complete"""
+"""An asynchronous function that waits for multiple random delay tasks to complete"""
 
 import asyncio
 from typing import List
