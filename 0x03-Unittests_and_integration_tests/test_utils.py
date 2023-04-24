@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Parameterize a unit test
+""" Parameterize a unit test
 """
 import unittest
 import requests
@@ -18,7 +17,6 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
-
     def test_access_nested_map(self, nested_map: Mapping,
                                path: Sequence, expected: int) -> None:
         """Test access_nested_map method.
@@ -32,7 +30,6 @@ class TestAccessNestedMap(unittest.TestCase):
         ({}, ("a",)),
         ({"a": 1}, ("a", "b"))
     ])
-
     def test_access_nested_map_exception(self, nested_map: Mapping,
                                          path: Sequence) -> None:
         """Test access nested map exception
@@ -86,4 +83,3 @@ class TestMemoize(unittest.TestCase):
             test.a_property()
             test.a_property()
             mock_object.assert_called_once()
-
