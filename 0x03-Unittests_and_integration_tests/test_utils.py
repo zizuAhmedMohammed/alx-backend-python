@@ -14,6 +14,7 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": {"b": 2}}, ("a",), {"b": 2}),
         ({"a": {"b": 2}}, ("a", "b"), 2)
     ])
+
     def test_access_nested_map(self, nested_map: Mapping,
                                path: Sequence, expected: int) -> None:
         """Test access_nested_map method.
@@ -27,3 +28,13 @@ class TestAccessNestedMap(unittest.TestCase):
         ({}, ("a",)),
         ({"a": 1}, ("a", "b"))
     ])
+
+    def test_access_nested_map_exception(self, nested_map: Mapping,
+                                         path: Sequence) -> None:
+        """Test access nested map exception
+           Args:
+                nested_map (Dict): A Dictonary
+                path(List, Tuple, set): key to get value of nested dect
+        """
+        with self.assertRaises(Exception):
+            access_nested_map(nested_map, path)
