@@ -5,9 +5,9 @@ Parameterize a unit test
 import unittest
 import requests
 from unittest.mock import patch
+from utils import access_nested_map, get_json, memoize
 from typing import Mapping, Sequence, Any
 from parameterized import parameterized
-from utils import access_nested_map, get_json, memoize
 
 
 class TestAccessNestedMap(unittest.TestCase):
@@ -86,3 +86,4 @@ class TestMemoize(unittest.TestCase):
             test.a_property()
             test.a_property()
             mock_object.assert_called_once()
+
